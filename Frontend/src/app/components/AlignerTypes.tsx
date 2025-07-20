@@ -24,16 +24,16 @@ const dentalConditions: DentalCondition[] = [
     imageUrl: '/forwardly-placed.png' // Replace with your forwardly placed teeth image
   },
   {
-    id: 'cross-bite',
-    title: 'Cross-bite',
-    description: 'The top and bottom teeth do not fall in the correct position on closing of jaws. A misalignment issue that can be effectively treated with invisible braces.',
-    imageUrl: '/cross-bite.png' // Replace with your cross-bite image
-  },
-  {
     id: 'open-bite',
     title: 'Open bite',
     description: "The upper and lower teeth don't touch the front or back of the mouth when the jaw is shut. This can easily be addressed by using clear aligners.",
     imageUrl: '/open-bite.png' // Replace with your open bite image
+  }, 
+  {
+    id: 'cross-bite',
+    title: 'Cross-bite',
+    description: 'The top and bottom teeth do not fall in the correct position on closing of jaws. A misalignment issue that can be effectively treated with invisible braces.',
+    imageUrl: '/cross-bite.png' // Replace with your cross-bite image
   }
 ];
 
