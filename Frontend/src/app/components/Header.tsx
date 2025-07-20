@@ -78,7 +78,7 @@ const Header: React.FC = () => {
           : 'bg-white/10 backdrop-blur-md'
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Unique Logo Section with Tooth */}
             <div className="flex items-center space-x-4 group">
               {/* Animated Logo Container */}
@@ -120,20 +120,20 @@ const Header: React.FC = () => {
                 onClick={() => handleWhatsAppClick('9391884433')}
                 className="relative group/btn overflow-hidden"
               >
-                {/* Button Background */}
-                <div className="flex items-center space-x-3 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border border-green-300">
-                  <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                    <MessageCircle className="w-4 h-4" />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-bold text-sm">WhatsApp</div>
-                    <div className="text-xs opacity-90">Instant Chat</div>
-                  </div>
-                </div>
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl blur-lg opacity-0 group-hover/btn:opacity-30 transition-opacity duration-300 -z-10"></div>
-                {/* Shine Animation */}
-                <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 group-hover/btn:translate-x-[300%] transition-transform duration-700"></div>
+                      {/* Button Background */}
+                      <div className="flex items-center space-x-3 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border border-green-300">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <MessageCircle className="w-4 h-4" />
+                        </div>
+                        <div className="text-left">
+                          <div className="font-bold text-sm">WhatsApp</div>
+                          {/* <div className="text-xs opacity-90">Instant Chat</div> */}
+                        </div>
+                      </div>
+                      {/* Glow Effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl blur-lg opacity-0 group-hover/btn:opacity-30 transition-opacity duration-300 -z-10"></div>
+                      {/* Shine Animation */}
+                      <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 group-hover/btn:translate-x-[300%] transition-transform duration-700"></div>
               </button>
               
               <button
@@ -147,7 +147,6 @@ const Header: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <div className="font-bold text-sm">Call Now</div>
-                    <div className="text-xs opacity-90">Direct Line</div>
                   </div>
                 </div>
                 {/* Glow Effect */}
