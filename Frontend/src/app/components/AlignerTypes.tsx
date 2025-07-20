@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface DentalCondition {
   id: string;
@@ -64,7 +65,7 @@ const AlignerTypes: React.FC = () => {
 
         {/* Desktop Grid View */}
         <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-8">
-          {dentalConditions.map((condition, index) => (
+          {dentalConditions.map((condition) => (
             <div
               key={condition.id}
               className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden group ${
@@ -76,10 +77,11 @@ const AlignerTypes: React.FC = () => {
               {/* Card Background Gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              {/* Image Container */}
+              {/* Imge Container */}
               <div className="relative p-6 pb-4">
-                <div className="w-full h-32 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                  <img 
+                <div className="relative w-full h-32 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                  fill
                     src={condition.imageUrl} 
                     alt={condition.title}
                     className="w-full h-full object-cover rounded-xl"
@@ -129,8 +131,9 @@ const AlignerTypes: React.FC = () => {
               {dentalConditions.map((condition) => (
                 <div key={condition.id} className="w-full flex-shrink-0">
                   <div className="bg-white p-6 m-2 rounded-xl">
-                    <div className="w-full h-40 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
-                      <img 
+                    <div className="relative w-full h-40 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                      <Image
+                        fill
                         src={condition.imageUrl} 
                         alt={condition.title}
                         className="w-full h-full object-cover rounded-xl"

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Star, MapPin, Clock, Award } from 'lucide-react';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,12 +10,9 @@ const Header: React.FC = () => {
 
   // Mock images for the photo grid - replace with actual images
   const heroImages = [
-    '/api/placeholder/200/150', // Replace with actual patient images
-    '/api/placeholder/200/150',
-    '/api/placeholder/200/150',
-    '/api/placeholder/200/150',
-    '/api/placeholder/200/150',
-    '/api/placeholder/200/150'
+    '/pat1.jpg', // Replace with actual patient images
+    '/pat2.jpg',
+    '/pat3.jpg'
   ];
 
   useEffect(() => {
@@ -84,8 +82,9 @@ const Header: React.FC = () => {
             {/* Unique Logo Section with Tooth */}
             <div className="flex items-center space-x-4 group">
               {/* Animated Logo Container */}
-              <div className="w-12 h-12 bg-gradient-to-br rounded-xl flex items-center justify-center shadow-lg p-1">
-                <img
+              <div className="relative w-12 h-12 bg-gradient-to-br rounded-xl flex items-center justify-center shadow-lg p-1">
+                <Image
+                fill
                     src="/logo.png" // Replace with the correct path
                     alt="D Care Dental Logo"
                     className="object-contain w-full h-full transition-transform duration-300 hover:scale-110"
@@ -165,7 +164,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 mt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 mt-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
           {/* Left Content */}
           <div className="space-y-8">
@@ -173,7 +172,7 @@ const Header: React.FC = () => {
             <div className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md rounded-full px-6 py-3 shadow-xl border border-blue-100">
               <Award className="w-5 h-5 text-blue-500" />
               <span className="text-gray-800 font-semibold text-lg">
-                World's First Aligners with 3D Mapping
+                World&apos;s First Aligners with 3D Mapping
               </span>
             </div>
 
@@ -265,9 +264,10 @@ const Header: React.FC = () => {
           <div className="relative">
             {/* Main Feature Image */}
             <div className="relative mb-6">
-              <div className="w-full h-64 bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/40">
-                <img 
-                  src="/api/placeholder/400/256"
+              <div className="relative w-full h-64 bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/40">
+                <Image
+                fill
+                  src="/pat3.jpg"
                   alt="Patient with aligner"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -287,7 +287,7 @@ const Header: React.FC = () => {
             </div>
 
             {/* Image Grid */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="relative grid grid-cols-3 gap-3">
               {heroImages.slice(0, 6).map((image, index) => (
                 <div
                   key={index}
@@ -297,7 +297,8 @@ const Header: React.FC = () => {
                       : 'hover:scale-105'
                   }`}
                 >
-                  <img 
+                  <Image 
+                  fill
                     src={image}
                     alt={`Treatment ${index + 1}`}
                     className="w-full h-full object-cover"
