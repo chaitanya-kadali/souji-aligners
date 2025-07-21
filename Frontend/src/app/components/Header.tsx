@@ -151,7 +151,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 mt-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 mt-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
           {/* Left Content */}
           <div className="space-y-8">
