@@ -11,8 +11,8 @@ const Header: React.FC = () => {
   // Mock images for the photo grid - replace with actual images
   const heroImages = [
     '/pat1.jpg', // Replace with actual patient images
-    '/pat2.jpg',
-    '/pat3.jpg'
+    '/pat3.png',
+    '/pat2.jpg'
   ];
 
   useEffect(() => {
@@ -99,14 +99,12 @@ const Header: React.FC = () => {
                 <h1 className={`font-black text-3xl transition-all duration-500 transform group-hover:scale-105 ${
                   isScrolled ? 'text-gray-900' : 'text-gray-900'
                 } bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent`}>
-                  D CARE DENTAL
+                  D CARE DENTAL & Souji Aligners
                 </h1>
                 <p className={`text-sm font-medium transition-colors duration-300 ${
                   isScrolled ? 'text-gray-600' : 'text-gray-700'
                 }`}>
-                  <span className="bg-gradient-to-r from-pink-500 to-pink-600 bg-clip-text text-transparent">
-                    Souji Aligners Specialist
-                  </span>
+                
                 </p>
                 
                 {/* Animated Underline */}
@@ -234,12 +232,12 @@ const Header: React.FC = () => {
                 </button>
                 
                 <button
-                  onClick={() => handlePhoneClick('9553923923')}
+                  onClick={() => handlePhoneClick('9391884433')}
                   className="flex items-center justify-center space-x-3 bg-blue-500 hover:bg-blue-600 text-white px-6 py-4 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   <Phone className="w-6 h-6" />
                   <div className="text-left">
-                    <div className="font-bold">9553 923 923</div>
+                    <div className="font-bold">9391884433</div>
                     <div className="text-sm opacity-90">Call Now</div>
                   </div>
                 </button>
@@ -253,7 +251,7 @@ const Header: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span className="text-sm">Hyderabad</span>
+                  <span className="text-sm">Telangana</span>
                 </div>
               </div>
             </div>
@@ -266,7 +264,7 @@ const Header: React.FC = () => {
               <div className="relative w-full h-64 bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/40">
                 <Image
                 fill
-                  src="/pat3.jpg"
+                  src="/3d_pic.jpg"
                   alt="Patient with aligner"
                   className="w-full h-full object-cover"
                   onError={(e) => {
