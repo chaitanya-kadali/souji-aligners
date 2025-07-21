@@ -77,7 +77,7 @@ const Header: React.FC = () => {
           ? 'bg-white/98 backdrop-blur-xl shadow-2xl border-b border-blue-100' 
           : 'bg-white/10 backdrop-blur-md'
       }`}>
-        <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Unique Logo Section with Tooth */}
             <div className="flex items-center space-x-4 group">
