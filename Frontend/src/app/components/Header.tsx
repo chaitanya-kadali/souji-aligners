@@ -96,19 +96,9 @@ const Header: React.FC = () => {
               
               {/* Brand Text with Animation */}
               <div className="relative">
-                <h1 className={`font-black text-3xl transition-all duration-500 transform group-hover:scale-105 ${
-                  isScrolled ? 'text-gray-900' : 'text-gray-900'
-                } bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent`}>
-                  D CARE DENTAL & Souji Aligners
+                <h1 className="font-extrabold  text-2xl  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+                  D CARE DENTAL & SOUJI ALIGNERS
                 </h1>
-                <p className={`text-sm font-medium transition-colors duration-300 ${
-                  isScrolled ? 'text-gray-600' : 'text-gray-700'
-                }`}>
-                
-                </p>
-                
-                {/* Animated Underline */}
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-pink-400 group-hover:w-full transition-all duration-500"></div>
               </div>
             </div>
 
