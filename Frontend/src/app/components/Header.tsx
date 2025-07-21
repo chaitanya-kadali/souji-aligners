@@ -11,8 +11,8 @@ const Header: React.FC = () => {
   // Mock images for the photo grid - replace with actual images
   const heroImages = [
     '/pat1.jpg', // Replace with actual patient images
-    '/pat3.jpg',
-    '/pat2.jpg'
+   '/pat2.jpg',
+  '/pat3.jpg' 
   ];
 
   useEffect(() => {
