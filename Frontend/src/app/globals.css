@@ -6,6 +6,16 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'Logo-fo';
+  src: url('../../public/fonts/AnandaBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo-font {
+  font-family: "Logo-fo", sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 

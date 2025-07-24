@@ -91,12 +91,10 @@ const Header: React.FC = () => {
                 />
                 </div>
 
-              
-             
-              
+            
               {/* Brand Text with Animation */}
               <div className="relative">
-                <h1 className="font-extrabold  text-2xl  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+                <h1 className="font-extrabold  text-2xl  bg-gradient-to-r from-red-600 via-red-700 to-red-800 bg-clip-text text-transparent">
                   D CARE DENTAL & SOUJI ALIGNERS
                 </h1>
               </div>
