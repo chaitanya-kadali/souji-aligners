@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, Star, MapPin, Clock, Award } from 'lucide-react';
+import { Phone, MessageCircle, Star, MapPin, Clock, Award, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const Header: React.FC = () => {
@@ -38,6 +38,17 @@ const Header: React.FC = () => {
 
   const handlePhoneClick = (number: string) => {
     window.location.href = `tel:${number.replace(/\s/g, '')}`;
+  };
+
+
+  const scrollToInfoSection = () => {
+    const infoSection = document.getElementById('3d-mapping-info');
+    if (infoSection) {
+      infoSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
@@ -154,12 +165,16 @@ const Header: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             {/* Hero Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md rounded-full px-6 py-3 shadow-xl border border-blue-100">
-              <Award className="w-5 h-5 text-blue-500" />
-              <span className="text-gray-800 font-semibold text-lg">
+            <button
+              onClick={scrollToInfoSection}
+              className="inline-flex items-center space-x-2 bg-white/95 backdrop-blur-md rounded-full px-6 py-3 shadow-xl border border-blue-100 hover:bg-white hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group cursor-pointer"
+            >
+              <Award className="w-5 h-5 text-blue-500 group-hover:text-blue-600 transition-colors" />
+              <span className="text-gray-800 font-semibold text-lg group-hover:text-gray-900">
                 World&apos;s First Aligners with 3D Mapping
               </span>
-            </div>
+              <ArrowRight className="w-4 h-4 text-blue-500 group-hover:text-blue-600 transition-all duration-300 group-hover:translate-x-1" />
+            </button>
 
             {/* Souji Aligners Logo/Brand */}
             <div className="flex items-center space-x-4 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">

@@ -1,3 +1,4 @@
+import ThreeDMappingInfo from "./components/3dcomponent";
 import AlignerTypes from "./components/AlignerTypes";
 import GoogleMapsComponent from "./components/googleMaps";
 import Header from "./components/Header";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <AlignerTypes/> 
       <WhatsAligners />
+      <ThreeDMappingInfo />
       <WhySouji />
       <GoogleMapsComponent />
       <Footer />
