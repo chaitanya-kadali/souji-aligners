@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Star, Shield, Clock, Award, Users, CheckCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, Shield, Clock, Award, Users, CheckCircle } from 'lucide-react';
 
 export default function WhySouji() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

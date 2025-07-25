@@ -1,17 +1,10 @@
 "use client";
 
 import React from 'react';
-import { Phone, MessageCircle, Zap, Shield, Heart } from 'lucide-react';
+import {  Zap, Shield, Heart } from 'lucide-react';
 import Image from 'next/image';
 
 const ThreeDMappingInfo: React.FC = () => {
-  const handleWhatsAppClick = (number: string) => {
-    window.open(`https://wa.me/${number.replace(/\s/g, '')}`, '_blank');
-  };
-
-  const handlePhoneClick = (number: string) => {
-    window.location.href = `tel:${number.replace(/\s/g, '')}`;
-  };
 
   return (
     <section id="3d-mapping-info" className="relative min-h-screen overflow-hidden">
