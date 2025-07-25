@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, Star, MapPin, Clock, Award, ArrowRight } from 'lucide-react';
+import { Phone, MessageCircle, Star, MapPin, Clock, Award, ArrowRight, Zap, Shield, Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 
 const Header: React.FC = () => {
@@ -178,10 +178,15 @@ const Header: React.FC = () => {
 
             {/* Souji Aligners Logo/Brand */}
             <div className="flex items-center space-x-4 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-200 to-pink-300 rounded-xl flex items-center justify-center shadow-lg border-2 border-pink-100">
-                {/* Placeholder for Souji Aligners logo */}
-                <span className="text-gray-800 font-bold text-2xl">SA</span>
-              </div>
+              <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur-lg opacity-75"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl border-2 border-blue-300/60">
+                    <span className="text-white font-black text-2xl tracking-wider">SA</span>
+                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full flex items-center justify-center">
+                      <Heart className="w-3 h-3 text-white animate-pulse" />
+                    </div>
+                  </div>
+                </div>
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-2">
                   SOUJI ALIGNERS
@@ -198,23 +203,32 @@ const Header: React.FC = () => {
             </div>
 
             {/* Key Benefits */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-6">
               {[
-                'Faster than braces',
-                'More Comfortable',
-                'Invisible',
-                'Exclusively an Orthodontist Aligner'
+                { text: 'Faster than braces', icon: Zap },
+                { text: 'More Comfortable', icon: Heart },
+                { text: 'Invisible', icon: Sparkles },
+                { text: 'Exclusively an Orthodontist Aligner', icon: Shield }
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white/30 backdrop-blur-md rounded-xl p-4 transform hover:scale-105 transition-all duration-200 border border-white/40 hover:bg-white/40"
+                  className="relative bg-white/40 backdrop-blur-2xl rounded-2xl p-6 transform hover:scale-110 transition-all duration-300 border-2 border-blue-100/60 hover:border-blue-200/80 shadow-xl hover:shadow-2xl group overflow-hidden"
                 >
-                  <h3 className="text-gray-800 font-bold text-lg leading-tight">
-                    {benefit}
-                  </h3>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 via-transparent to-blue-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-100/20 to-transparent rounded-bl-full"></div>
+                  
+                  <div className="relative flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                      <benefit.icon className="w-10 h-6 text-white" />
+                    </div>
+                    <h3 className="text-gray-800 font-bold text-lg leading-tight">
+                      {benefit.text}
+                    </h3>
+                  </div>
                 </div>
               ))}
             </div>
+
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-blue-50/90 to-pink-50/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/40">

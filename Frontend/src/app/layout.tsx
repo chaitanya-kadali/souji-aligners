@@ -18,6 +18,31 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-white.png",
   },
+  keywords: ["Souji", "Aligners", "teeth", "Dental", "D Care Dental"],
+  authors: [{ name: "Chaitanya Kadali" }],
+  openGraph: {
+    title: "Souji Aligners",
+    description: "Platform for D Care Dental & Souji Aligners",
+    url: "https://soujialigners.com/",
+    siteName: "Souji Aligners",
+    images: [
+      {
+        url: "https://soujialigners.com/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Souji Aligners",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Souji Aligners",
+    description: "Platform for D Care Dental & Souji Aligners.",
+    images: ["https://soujialigners.com/preview.png"],
+  },
+  metadataBase: new URL("https://soujialigners.com"),
 };
 
 export default function RootLayout({
