@@ -10,7 +10,7 @@ export default function PopUp() {
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       
-      <AlertDialogContent className="bg-gradient-to-br from-white via-blue-50 to-white border-0 shadow-2xl w-[98vw] max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] p-0 overflow-hidden rounded-2xl md:rounded-3xl mx-auto">
+      <AlertDialogContent className="bg-gradient-to-br from-white via-blue-50 to-white border-0 shadow-2xl w-[90vw] max-w-[320px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[580px] p-0 overflow-hidden rounded-2xl md:rounded-3xl fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-h-[90vh] overflow-y-auto">
         
         <AlertDialogHeader>
           <AlertDialogTitle className="sr-only">
