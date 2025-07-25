@@ -10,12 +10,12 @@ const WhatsAligners: FC = () => {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8 relative inline-block group cursor-pointer">
-            <span className="relative z-10 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:via-blue-800 group-hover:to-blue-600 transition-all duration-700">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-blue-600 mb-8 relative inline-block group cursor-pointer">
+            <span className="relative z-10 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:via-blue-800 group-hover:to-blue-600 transition-all duration-700">
               What are Clear Aligners and How Do They Work?
             </span>
-            <span className="absolute bottom-2 left-0 w-full h-4 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 opacity-30 -rotate-1 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500 rounded-full shadow-lg"></span>
-            <span className="absolute bottom-0 left-2 w-full h-2 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 opacity-20 rotate-1 group-hover:opacity-40 group-hover:scale-110 transition-all duration-500 rounded-full"></span>
+            {/* <span className="absolute bottom-2 left-0 w-full h-4 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400 opacity-30 -rotate-1 group-hover:opacity-50 group-hover:scale-105 transition-all duration-500 rounded-full shadow-lg"></span>
+            <span className="absolute bottom-0 left-2 w-full h-2 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 opacity-20 rotate-1 group-hover:opacity-40 group-hover:scale-110 transition-all duration-500 rounded-full"></span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-8 rounded-full shadow-sm"></div>
           <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
@@ -68,7 +68,7 @@ const WhatsAligners: FC = () => {
                 Step-by-Step Progress
               </h3>
               <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                You&apos;ll receive a series of aligner sets tailored to your personalized treatment plan. Each set works gradually to reposition your teeth closer to the ideal alignment.
+                You'll receive a series of aligner sets tailored to your personalized treatment plan. Each set works gradually to reposition your teeth closer to the ideal alignment.
               </p>
               <div className="mt-4 w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500 rounded-full"></div>
             </div>

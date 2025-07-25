@@ -61,72 +61,96 @@ const AlignerTypes: React.FC = () => {
       <div className="max-w-[80%] mx-auto mt-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-600 mb-4  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-bold text-gray-600 mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text ">
             Dental Conditions Treatment
           </h1>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover how invisible braces and clear aligners can effectively treat various dental alignment issues
           </p>
         </div>
 
-        {/* Desktop Grid View */}
-        <div className="hidden lg:grid lg:grid-cols-5 gap-6 mb-8">
+        {/* Desktop Carousel with 3 cards visible */}
+        <div className="hidden lg:block relative mb-8">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-3 gap-6 relative z-0">
+            {dentalConditions.slice(currentIndex, currentIndex + 3).map((condition) => (
+              <div
+                key={condition.id}
+                className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden group ${
+                  hoveredCard === condition.id ? 'ring-2 ring-blue-400 ring-opacity-60' : ''
+                }`}
+                onMouseEnter={() => setHoveredCard(condition.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                {/* Background Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-          {dentalConditions.map((condition) => (
-            <div
-              key={condition.id}
-              className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer overflow-hidden group ${
-                hoveredCard === condition.id ? 'ring-2 ring-blue-400 ring-opacity-60' : ''
-              }`}
-              onMouseEnter={() => setHoveredCard(condition.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-            >
-              {/* Card Background Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              {/* Imge Container */}
-              <div className="relative p-6 pb-4">
-                <div className="relative w-full h-32 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                  <Image
-                  fill
-                    src={condition.imageUrl} 
-                    alt={condition.title}
-                    className="w-full h-full object-cover rounded-xl"
-                    onError={(e) => {
-                      // Fallback to a colored div if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent) {
-                        parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-6xl">🦷</div>`;
-                      }
-                    }}
-                  />
-                </div>
-                
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200">
-                    {condition.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">
-                    {condition.description}
-                  </p>
-                </div>
+                {/* Image Section */}
+                <div className="relative p-6 pb-4">
+                  <div className="relative w-full h-32 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      fill
+                      src={condition.imageUrl}
+                      alt={condition.title}
+                      className="w-full h-full object-cover rounded-xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<div class="w-full h-full flex items-center justify-center text-6xl">🦷</div>`;
+                        }
+                      }}
+                    />
+                  </div>
 
-                {/* Hover Effect Overlay */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                    <ChevronRight className="w-4 h-4 text-white" />
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors duration-200">
+                      {condition.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">
+                      {condition.description}
+                    </p>
+                  </div>
+
+                  {/* Hover Icon */}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                      <ChevronRight className="w-4 h-4 text-white" />
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Bottom Accent Line */}
-              <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </div>
-          ))}
+                {/* Bottom Accent Line */}
+                <div className="h-1 bg-gradient-to-r from-blue-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Buttons Cross Over Cards */}
+          <button
+            onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+            disabled={currentIndex === 0}
+            className="absolute top-1/2 -translate-y-1/2 left-0 -translate-x-1/2 z-10 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition disabled:opacity-30"
+          >
+            <ChevronRight className="w-5 h-5 rotate-180" />
+          </button>
+
+          <button
+            onClick={() =>
+              setCurrentIndex((prev) =>
+                prev + 3 < dentalConditions.length ? prev + 1 : prev
+              )
+            }
+            disabled={currentIndex + 3 >= dentalConditions.length}
+            className="absolute top-1/2 -translate-y-1/2 right-0 translate-x-1/2 z-10 p-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition disabled:opacity-30"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
+
+
 
         {/* Mobile Carousel View */}
         <div className="lg:hidden">
