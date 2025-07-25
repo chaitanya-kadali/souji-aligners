@@ -30,6 +30,12 @@ const dentalConditions: DentalCondition[] = [
     imageUrl: '/open-bite.png' // Replace with your open bite image
   }, 
   {
+    id: 'crooked-teeth',
+    title: 'Crooked-teeth',
+    description: 'rooked teeth refer to teeth that are misaligned, overlapping, or twisted They can impact both the appearance of your smile and your oral health',
+    imageUrl: '/crooked-teeth.png' // Replace with your cross-bite image
+  },
+  {
     id: 'cross-bite',
     title: 'Cross-bite',
     description: 'The top and bottom teeth do not fall in the correct position on closing of jaws. A misalignment issue that can be effectively treated with invisible braces.',
@@ -55,16 +61,17 @@ const AlignerTypes: React.FC = () => {
       <div className="max-w-[80%] mx-auto mt-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-600 mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text ">
+          <h1 className="text-4xl font-bold text-gray-600 mb-4  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 bg-clip-text text-transparent">
             Dental Conditions Treatment
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Discover how invisible braces and clear aligners can effectively treat various dental alignment issues
           </p>
         </div>
 
         {/* Desktop Grid View */}
-        <div className="hidden lg:grid lg:grid-cols-4 gap-6 mb-8">
+        <div className="hidden lg:grid lg:grid-cols-5 gap-6 mb-8">
+
           {dentalConditions.map((condition) => (
             <div
               key={condition.id}
@@ -131,7 +138,7 @@ const AlignerTypes: React.FC = () => {
               {dentalConditions.map((condition) => (
                 <div key={condition.id} className="w-full flex-shrink-0">
                   <div className="bg-white p-6 m-2 rounded-xl">
-                    <div className="relative w-full h-40 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-4 flex items-center justify-center overflow-hidden">
+                    <div className="relative w-full h-40 bg-gradient-to-br from-pink-100 to-rose-100 rounded-xl mb-5 flex items-center justify-center overflow-hidden">
                       <Image
                         fill
                         src={condition.imageUrl} 
