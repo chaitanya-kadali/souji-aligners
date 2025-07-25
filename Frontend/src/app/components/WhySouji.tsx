@@ -5,7 +5,13 @@ import { ChevronDown, ChevronUp, Shield, Clock, Award, Users, CheckCircle } from
 
 export default function WhySouji() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-
+ const [showFAQSection, setShowFAQSection] = useState(false);
+  const toggleFAQSection = () => {
+    setShowFAQSection(!showFAQSection);
+    if (!showFAQSection) {
+      setOpenFAQ(null); // Close any open FAQ when collapsing section
+    }
+  };
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
@@ -75,7 +81,7 @@ export default function WhySouji() {
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent mb-3 sm:mb-4 lg:mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent mb-3 sm:mb-4 lg:mb-6 leading-tight py-2">
             Why Choose Souji Aligners?
           </h2>
           
@@ -109,15 +115,25 @@ export default function WhySouji() {
 
         {/* FAQ Section */}
         <div className="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 border border-blue-100">
-          <div className="text-center mb-8 sm:mb-12">
+           <button
+            onClick={toggleFAQSection}
+            className="w-full text-center mb-6 sm:mb-8 group hover:bg-blue-50 rounded-2xl p-4 sm:p-6 transition-all duration-300"
+          >
+          <div className="flex justify-center items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-3 sm:mb-4">
               Frequently Asked Questions
             </h3>
-            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              Get answers to the most common questions about clear aligner treatment
-            </p>
+           <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
+                {showFAQSection ? (
+                  <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+                )}
+              </div>
           </div>
-
+          </button>
+   
+          {showFAQSection && (
           <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div 
@@ -153,7 +169,7 @@ export default function WhySouji() {
               </div>
             ))}
           </div>
-
+            )}
         </div>
       </div>
     </section>
