@@ -68,7 +68,7 @@ const WhatsAligners: FC = () => {
                 Step-by-Step Progress
               </h3>
               <p className="text-gray-700 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                You'll receive a series of aligner sets tailored to your personalized treatment plan. Each set works gradually to reposition your teeth closer to the ideal alignment.
+                You&apos;ll receive a series of aligner sets tailored to your personalized treatment plan. Each set works gradually to reposition your teeth closer to the ideal alignment.
               </p>
               <div className="mt-4 w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500 rounded-full"></div>
             </div>
