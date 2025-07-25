@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const heroImages = [
     '/pat1.jpg', // Replace with actual patient images
    '/pat2.jpg',
-  '/pat3.jpg' 
+  '/3d_pic.jpg' 
   ];
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
             
               {/* Brand Text with Animation */}
               <div className="relative">
-                <h1 className="font-extrabold  text-2xl  bg-gradient-to-r from-red-600 via-red-700 to-red-800 bg-clip-text text-transparent">
+                <h1 className="font-extrabold  text-2xl  bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
                   D CARE DENTAL & SOUJI ALIGNERS
                 </h1>
               </div>
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                 className="relative group/btn overflow-hidden"
               >
                       {/* Button Background */}
-                      <div className="flex items-center space-x-3 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border border-green-300">
+                      <div className="flex items-center space-x-3 bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-6 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border border-blue-300">
                         <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                           <MessageCircle className="w-4 h-4" />
                         </div>
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
                         </div>
                       </div>
                       {/* Glow Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl blur-lg opacity-0 group-hover/btn:opacity-30 transition-opacity duration-300 -z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl blur-lg opacity-0 group-hover/btn:opacity-30 transition-opacity duration-300 -z-10"></div>
                       {/* Shine Animation */}
                       <div className="absolute top-0 -left-full h-full w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent transform skew-x-12 group-hover/btn:translate-x-[300%] transition-transform duration-700"></div>
               </button>
@@ -163,7 +163,7 @@ const Header: React.FC = () => {
 
             {/* Souji Aligners Logo/Brand */}
             <div className="flex items-center space-x-4 bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-200 to-pink-300 rounded-xl flex items-center justify-center shadow-lg border-2 border-pink-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-200 to-pink-300 rounded-xl flex items-center justify-center shadow-lg border-2 border-pink-100">
                 {/* Placeholder for Souji Aligners logo */}
                 <span className="text-gray-800 font-bold text-2xl">SA</span>
               </div>
@@ -210,7 +210,7 @@ const Header: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <button
                   onClick={() => handleWhatsAppClick('9391884433')}
-                  className="flex items-center justify-center space-x-3 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  className="flex items-center justify-center space-x-3 bg-blue-500 hover:bg-blue-600 text-white px-6 py-4 rounded-xl transition-all duration-200 transform hover:scale-105 shadow-lg"
                 >
                   <MessageCircle className="w-6 h-6" />
                   <div className="text-left">
@@ -252,7 +252,7 @@ const Header: React.FC = () => {
               <div className="relative w-full h-64 bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/40">
                 <Image
                 fill
-                  src="/3d_pic.jpg"
+                  src="/pat3.jpg"
                   alt="Patient with aligner"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -266,9 +266,7 @@ const Header: React.FC = () => {
                 />
               </div>
               {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-400 to-pink-400 text-white px-4 py-2 rounded-full font-bold shadow-lg animate-bounce-slow border border-white/20">
-                3D Mapping
-              </div>
+              
             </div>
 
             {/* Image Grid */}
@@ -298,6 +296,9 @@ const Header: React.FC = () => {
                   />
                 </div>
               ))}
+              <div className="absolute -top-7 -right-4 bg-gradient-to-r from-blue-400 to-pink-400 text-white px-4 py-2 rounded-full font-bold shadow-lg animate-bounce-slow border border-white/20 z-10">
+                3D Mapping
+              </div>
             </div>
 
             {/* Decorative Elements */}

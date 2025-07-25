@@ -14,7 +14,7 @@ function Footer() {
     <div className="shadow-inner shadow-gray-300 w-full">
     <div className="bg-white h-50 mt-10 px-20 max-w-[80rem] mx-auto "> 
 
-      <p className="logo-font tracking-wide text-4xl h-15 bg-gradient-to-r from-red-600 via-red-700 to-red-800 bg-clip-text text-transparent"> Souji Aligners </p>
+      <p className="logo-font tracking-wide text-4xl h-15 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent"> Souji Aligners </p>
 
     <div className="flex flex-row pt-5 justify-between mt-5 h-20"> 
         
