@@ -200,7 +200,7 @@ const GoogleMapsComponent: React.FC = () => {
                   </div>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2">
                     <div className="bg-white/95 backdrop-blur-md px-3 py-1 rounded-full shadow-lg border border-red-100">
-                      <span className="text-red-600 font-bold text-xs">We're Here!</span>
+                      <span className="text-red-600 font-bold text-xs">We&apos;re Here!</span>
                     </div>
                   </div>
                 </div>
