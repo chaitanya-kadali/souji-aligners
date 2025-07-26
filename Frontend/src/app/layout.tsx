@@ -14,25 +14,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Souji Aligners",
-  description: "D Care Dental & Souji Aligners",
+  description: "D Care Dental & Souji Aligners teeth aligners telangana hyderabad",
   icons: {
     icon: "/logo-white.png",
   },
-  keywords: ["Souji", "Aligners", "teeth", "Dental", "D Care Dental"],
+  keywords: ["Souji", "Aligners", "teeth", "Dental", "D Care Dental","D Care Multi Speciality Dental Hospital","Siddipet", "Hyderabad","Telangana"],
   authors: [{ name: "Chaitanya Kadali" }],
   openGraph: {
     title: "Souji Aligners",
-    description: "Platform for D Care Dental & Souji Aligners",
+    description: "Platform for D Care Dental & Souji Aligners teeth aligners telangana hyderabad",
     url: "https://soujialigners.com/",
     siteName: "Souji Aligners",
-    images: [
-      {
-        url: "https://soujialigners.com/preview.png",
-        width: 1200,
-        height: 630,
-        alt: "Souji Aligners",
-      },
-    ],
+    images: ["https://soujialigners.com/profile.jpg"],
     locale: "en_US",
     type: "website",
   },
@@ -40,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Souji Aligners",
     description: "Platform for D Care Dental & Souji Aligners.",
-    images: ["https://soujialigners.com/preview.png"],
+    images: ["https://soujialigners.com/profile.jpg"],
   },
   metadataBase: new URL("https://soujialigners.com"),
 };
