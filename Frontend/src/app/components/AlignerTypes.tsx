@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import HeadingBlue from './subcomp/HeadingBlue';
 
 interface DentalCondition {
   id: string;
@@ -61,9 +62,9 @@ const AlignerTypes: React.FC = () => {
       <div className="max-w-[80%] mx-auto mt-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-600 mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text ">
-            Dental Conditions Treatment
-          </h1>
+          
+          <HeadingBlue title='Dental Conditions Treatment'/>
+          
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover how invisible braces and clear aligners can effectively treat various dental alignment issues
           </p>
