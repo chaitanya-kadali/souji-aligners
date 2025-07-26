@@ -79,13 +79,13 @@ const HomeMain: React.FC = () => {
                 <h2 className="text-4xl font-bold text-gray-900 mb-2">
                   SOUJI ALIGNERS
                 </h2>
-                <div className="flex items-center space-x-2">
-                  <div className="flex">
+                <div className="flex flex-col sm:flex-row items-center sm:space-x-2 space-y-1 sm:space-y-0 text-center sm:text-left">
+                <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-blue-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-blue-400 fill-current" />
                     ))}
-                  </div>
-                  <span className="text-gray-700">World-Class Technology</span>
+                </div>
+                <span className="text-gray-700">World-Class Technology</span>
                 </div>
               </div>
             </div>
