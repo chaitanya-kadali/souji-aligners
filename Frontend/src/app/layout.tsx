@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Souji Aligners",
   description: "D Care Dental & Souji Aligners teeth aligners telangana hyderabad",
   icons: {
-    icon: "/logo-white.png",
+    icon: "/logo.ico",
   },
   keywords: ["Souji", "Aligners", "teeth", "Dental", "D Care Dental","D Care Multi Speciality Dental Hospital","Siddipet", "Hyderabad","Telangana"],
   authors: [{ name: "Chaitanya Kadali" }],
