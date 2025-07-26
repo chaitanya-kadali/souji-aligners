@@ -45,6 +45,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/*  add JSON-LD structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Souji Aligners D Dental Care",
+              url: "https://soujialigners.com",
+              image: "https://soujialigners.com/profile.jpg",
+              sameAs: [
+                "https://www.instagram.com/dcaredental",
+              ]
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
