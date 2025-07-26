@@ -58,8 +58,8 @@ const AlignerTypes: React.FC = () => {
 
   return (
     
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100 p-6">
-      <div className="max-w-[80%] mx-auto mt-20">
+    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-100 p-5 py-2">
+      <div className="max-w-[88%] mx-auto mt-20">
         {/* Header */}
         <div className="text-center mb-12">
           

@@ -48,7 +48,7 @@ const HomeMain: React.FC = () => {
   return (
     <>
      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 mt-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 pt-32 pb-20 mt-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
           {/* Left Content */}
           <div className="space-y-8">
@@ -76,7 +76,7 @@ const HomeMain: React.FC = () => {
                   </div>
                 </div>
               <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-2">
+                <h2 className="text-4xl font-bold text-gray-900 mb-2 text-center">
                   SOUJI ALIGNERS
                 </h2>
                 <div className="flex flex-col sm:flex-row items-center sm:space-x-2 space-y-1 sm:space-y-0 text-center sm:text-left">
@@ -123,7 +123,7 @@ const HomeMain: React.FC = () => {
 
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-blue-50/90 to-pink-50/90 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/40">
-              <h3 className="text-gray-900 text-2xl font-bold mb-4">
+              <h3 className="text-gray-900 text-2xl font-bold mb-4 text-center">
                 BOOK YOUR APPOINTMENT
               </h3>
               
