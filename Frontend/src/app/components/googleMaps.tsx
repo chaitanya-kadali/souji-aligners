@@ -46,9 +46,11 @@ const GoogleMapsComponent: React.FC = () => {
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <MapPin className="w-8 h-8 text-blue-400 animate-pulse" />
           </div>
-          <h1 className="text-5xl font-black mb-6 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-clip-text text-transparent leading-tight">
-            Find Us Here
-          </h1>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-600 mb-6 sm:mb-8 relative inline-block group cursor-pointer text-center leading-tight">
+                <span className="relative z-10 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:via-blue-800 group-hover:to-blue-600 transition-all duration-700">
+                Find Us Here
+                </span>
+            </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
             Visit our state-of-the-art dental clinic for premium care and advanced aligner treatments

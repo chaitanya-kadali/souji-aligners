@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Shield, Clock, Award, Users, CheckCircle } from 'lucide-react';
+import HeadingBlue from './subcomp/HeadingBlue';
 
 export default function WhySouji() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -81,9 +82,8 @@ export default function WhySouji() {
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent mb-3 sm:mb-4 lg:mb-6 leading-tight py-2">
-            Why Choose Souji Aligners?
-          </h2>
+         <HeadingBlue title="Why Choose Souji Aligners?" />
+          
           
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Experience the future of orthodontic treatment with cutting-edge technology, 
