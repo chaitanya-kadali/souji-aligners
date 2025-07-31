@@ -9,15 +9,15 @@ const GoogleMapsComponent: React.FC = () => {
   // Clinic details - replace with actual clinic information
   const clinicDetails = {
     name: "D CARE DENTAL & SOUJI ALIGNERS",
-    address: "123 Dental Street, Hyderabad, Telangana 500001",
+    address: "Beside Kotak Mahindra Bank, Medak Main Road, Ambedkarnagar-502103",
     phone: "9391884433",
     coordinates: {
-      lat: 17.3850, // Replace with actual latitude
-      lng: 78.4867  // Replace with actual longitude
+      lat: 18.101719, // Replace with actual latitude
+      lng: 78.848674 // Replace with actual longitude
     },
     rating: 4.9,
     reviews: 150,
-    hours: "Mon-Sat: 9:00 AM - 8:00 PM"
+    hours: "SUN-SAT: 9:00 AM - 8:00 PM"
   };
 
   const handleMapClick = () => {
@@ -46,11 +46,9 @@ const GoogleMapsComponent: React.FC = () => {
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <MapPin className="w-8 h-8 text-blue-400 animate-pulse" />
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-600 mb-6 sm:mb-8 relative inline-block group cursor-pointer text-center leading-tight">
-                <span className="relative z-10 bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:via-blue-800 group-hover:to-blue-600 transition-all duration-700">
-                Find Us Here
-                </span>
-            </h2>
+          <h1 className="text-5xl font-black mb-6 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 bg-clip-text text-transparent leading-tight">
+            Find Us Here
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
             Visit our state-of-the-art dental clinic for premium care and advanced aligner treatments
@@ -132,7 +130,7 @@ const GoogleMapsComponent: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-bold text-gray-800 mb-1">Opening Hours</h3>
                     <p className="text-gray-600">{clinicDetails.hours}</p>
-                    <p className="text-sm text-blue-600 font-medium">Sunday: Closed</p>
+                    {/* <p className="text-sm text-blue-600 font-medium">Sunday: Closed</p> */}
                   </div>
                 </div>
               </div>
@@ -173,7 +171,7 @@ const GoogleMapsComponent: React.FC = () => {
                 {/* Map Iframe */}
                 <div className="relative h-96 w-full">
                   <iframe
-                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6936604938887!2d${clinicDetails.coordinates.lng}!3d${clinicDetails.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjknMTIuMSJF!5e0!3m2!1sen!2sin!4v1635780000000!5m2!1sen!2sin`}
+                    src={`https://www.google.com/maps?q=${clinicDetails.coordinates.lat},${clinicDetails.coordinates.lng}&z=15&output=embed`}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -181,7 +179,8 @@ const GoogleMapsComponent: React.FC = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="rounded-3xl transition-all duration-500 group-hover:brightness-110"
-                  ></iframe>
+                  />
+
                   
                   {/* Map Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
