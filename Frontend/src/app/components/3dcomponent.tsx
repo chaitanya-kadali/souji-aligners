@@ -156,7 +156,7 @@ const ThreeDMappingInfo: React.FC = () => {
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { title: '3D Scanning', value: '99.9%', subtitle: 'Accuracy' },
-                { title: 'Treatment Time', value: '12-18', subtitle: 'Months' },
+                { title: 'Treatment Time', value: '6-14', subtitle: 'Months' },
                 { title: 'Comfort Level', value: '5/5', subtitle: 'Stars' },
                 { title: 'Success Rate', value: '100%', subtitle: 'Satisfied' }
               ].map((stat, index) => (
